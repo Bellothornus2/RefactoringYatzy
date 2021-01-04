@@ -107,20 +107,17 @@ class Yatzy:
     
     @staticmethod
     def small_straight(dice):
-        dict_dice = dict.fromkeys(dice,0)
-        answer = 30
-        for die in dice:
-            dict_dice[die] += 1
-        for die in dict_dice.values():
-            if die != 1:
-                answer = 0
-                break
+        new_dice = sorted(dice)[:-1]
+        if new_dice == [1,2,3,4] or new_dice == [2,3,4,5] or new_dice == [3,4,5,6]:
+            answer = 30
+        else:
+            answer = 0
         return answer
-    
 
     @staticmethod
     def large_straight(dice):
-        if sorted(dice) == [1,2,3,4,5] or sorted(dice) == [2,3,4,5,6]:
+        sorted_dice = sorted(dice)
+        if sorted_dice == [1,2,3,4,5] or sorted_dice == [2,3,4,5,6]:
             answer = 40
         else:
             answer = 0
