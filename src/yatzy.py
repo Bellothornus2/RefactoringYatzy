@@ -49,28 +49,28 @@ class Yatzy:
                 sum += 3
         return sum
     
-    def fours(self):
+    @staticmethod
+    def fours(dice):
         sum = 0
-        for at in range(5):
-            if (self.dice[at] == 4): 
+        for die in dice:
+            if die == 4: 
                 sum += 4
         return sum
     
-
-    def fives(self):
-        s = 0
-        i = 0
-        for i in range(len(self.dice)): 
-            if (self.dice[i] == 5):
-                s = s + 5
-        return s
-    
-
-    def sixes(self):
+    @staticmethod
+    def fives(dice):
         sum = 0
-        for at in range(len(self.dice)): 
-            if (self.dice[at] == 6):
-                sum = sum + 6
+        for die in dice:
+            if die == 5:
+                sum += 5
+        return sum
+    
+    @staticmethod
+    def sixes(dice):
+        sum = 0
+        for die in dice:
+            if die == 6:
+                sum += 6
         return sum
     
     @staticmethod
