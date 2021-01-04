@@ -1,13 +1,5 @@
 class Yatzy:
 
-    def __init__(self, d1, d2, d3, d4, _5):
-        self.dice = [0]*5
-        self.dice[0] = d1
-        self.dice[1] = d2
-        self.dice[2] = d3
-        self.dice[3] = d4
-        self.dice[4] = _5
-
     @staticmethod
     def chance(dice):
         total = 0
@@ -132,23 +124,3 @@ class Yatzy:
         else:
             answer = 0
         return answer
-"""
-#Yatzy.three_of_a_kind([3,3,3,4,5])
-Yatzy(3,3,3,4,5).three_of_a_kind()
-
-dice = Dice([4,5,3,2,1])
-Yatzy(dice).largeStraight()
-class Saludo:
-    def __init__(self):
-        self.adios = self.Adios()
-    def reveal(self, msg):
-        self.adios.despedida(msg)
-    class Adios:
-        def despedida(self, msg):
-            print(msg)
-first_game = Yatzy()
-first_game.first_player.roll()
-first_game.first_player.rolled.rules.pick()
-first_game.first_player.rolled.rules.picked.three_of_a_kind()
-first_game.rules.three_of_a_kind(dice)
-"""

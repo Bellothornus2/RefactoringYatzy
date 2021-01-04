@@ -66,7 +66,6 @@ def test_large_straight():
     assert 40 == Yatzy.large_straight([2,3,4,5,6])
     assert 0 == Yatzy.large_straight([1,2,2,4,5])
 
-#small straight has a fixed number of points if your roll has like a trio and a pair, for example (3,3,3,2,2) or (1,1,1,5,5) and such. This includes all the five dies
 def test_full_house():
     assert 25 == Yatzy.full_house([6,2,2,2,6])
     assert 25 == Yatzy.full_house([3,3,3,4,4])
