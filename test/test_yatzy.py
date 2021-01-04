@@ -57,11 +57,11 @@ def test_two_Pair():
     assert 18 == Yatzy.two_pair(3,3,6,6,6)
     assert 0 == Yatzy.two_pair(3,3,6,5,4)
 
-#this is not upper case count and add threes, but instead, if you have a "trio", count that trio, and the pair that stays outside
+#this is not "upper case" count and add threes, but instead, if you have a "trio", count that trio, and the pair that stays outside
 def test_three_of_a_kind():
-    assert 18 == Yatzy.three_of_a_kind(3,3,3,4,5)
-    assert 22 == Yatzy.three_of_a_kind(5,3,5,4,5)
-    assert 17 == Yatzy.three_of_a_kind(3,3,3,3,5)
+    assert 18 == Yatzy.three_of_a_kind([3,3,3,4,5])
+    assert 22 == Yatzy.three_of_a_kind([5,3,5,4,5])
+    assert 17 == Yatzy.three_of_a_kind([3,3,3,3,5])
 
 #same here as above explained, but instead of a trio and a pair, it is a double pair and a die alone
 def test_four_of_a_knd():

@@ -149,17 +149,20 @@ class Yatzy:
     
 
     @staticmethod
-    def three_of_a_kind( d1,  d2,  d3,  d4,  d5):
-        t = [0]*6
-        t[d1-1] += 1
-        t[d2-1] += 1
-        t[d3-1] += 1
-        t[d4-1] += 1
-        t[d5-1] += 1
-        for i in range(6):
-            if (t[i] >= 3):
-                return (i+1) * 3
-        return 0
+    def three_of_a_kind(dice):
+        dict_dice = dict.fromkeys(dice,0)
+        for die in dice:
+            dict_dice[die] += 1
+        for die in dict_dice:
+            if dict_dice[die] >= 3:
+                sumator = 0
+                for i in dice:
+                    sumator += i
+                answer = sumator
+                break
+            else:
+                answer = 0
+        return answer
     
 
     @staticmethod
@@ -228,3 +231,23 @@ class Yatzy:
             return _2_at * 2 + _3_at * 3
         else:
             return 0
+"""
+#Yatzy.three_of_a_kind([3,3,3,4,5])
+Yatzy(3,3,3,4,5).three_of_a_kind()
+
+dice = Dice([4,5,3,2,1])
+Yatzy(dice).largeStraight()
+class Saludo:
+    def __init__(self):
+        self.adios = self.Adios()
+    def reveal(self, msg):
+        self.adios.despedida(msg)
+    class Adios:
+        def despedida(self, msg):
+            print(msg)
+first_game = Yatzy()
+first_game.first_player.roll()
+first_game.first_player.rolled.rules.pick()
+first_game.first_player.rolled.rules.picked.three_of_a_kind()
+first_game.rules.three_of_a_kind(dice)
+"""
