@@ -125,37 +125,13 @@ class Yatzy:
     
 
     @staticmethod
-    def fullHouse( d1,  d2,  d3,  d4,  d5):
-        tallies = []
-        _2 = False
-        i = 0
-        _2_at = 0
-        _3 = False
-        _3_at = 0
-
-        tallies = [0]*6
-        tallies[d1-1] += 1
-        tallies[d2-1] += 1
-        tallies[d3-1] += 1
-        tallies[d4-1] += 1
-        tallies[d5-1] += 1
-
-        for i in range(6):
-            if (tallies[i] == 2): 
-                _2 = True
-                _2_at = i+1
-            
-
-        for i in range(6):
-            if (tallies[i] == 3): 
-                _3 = True
-                _3_at = i+1
-            
-
-        if (_2 and _3):
-            return _2_at * 2 + _3_at * 3
+    def full_house(dice):
+        dict_dice = dict.fromkeys(dice,0)
+        if len(dict_dice) == 2:
+            answer = 25
         else:
-            return 0
+            answer = 0
+        return answer
 """
 #Yatzy.three_of_a_kind([3,3,3,4,5])
 Yatzy(3,3,3,4,5).three_of_a_kind()
