@@ -12,10 +12,10 @@ def test_yatzy():
     assert 0 == Yatzy.yatzy([6,6,6,6,3])
 
 def test_aces():
-    assert 1 == Yatzy.aces(1,2,3,4,5)
-    assert 2 == Yatzy.aces(1,2,1,4,5)
-    assert 0 == Yatzy.aces(6,2,2,4,5)
-    assert 4 == Yatzy.aces(1,2,1,1,1)
+    assert 1 == Yatzy.aces([1,2,3,4,5])
+    assert 2 == Yatzy.aces([1,2,1,4,5])
+    assert 0 == Yatzy.aces([6,2,2,4,5])
+    assert 4 == Yatzy.aces([1,2,1,1,1])
 
 
 def test_twos():
