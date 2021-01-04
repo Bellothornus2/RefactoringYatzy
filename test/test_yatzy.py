@@ -45,18 +45,17 @@ def test_sixes():
     assert 6 == Yatzy.sixes([4,4,6,5,5])
     assert 18 == Yatzy.sixes([6,5,6,6,5])
 
-#this is not "upper case" count and add threes, but instead, if you have a "trio", count that trio, and the pair that stays outside
 def test_three_of_a_kind():
     assert 18 == Yatzy.three_of_a_kind([3,3,3,4,5])
     assert 22 == Yatzy.three_of_a_kind([5,3,5,4,5])
     assert 17 == Yatzy.three_of_a_kind([3,3,3,3,5])
 
 #same here as above explained, but instead of a trio and a pair, it is a double pair and a die alone
-def test_four_of_a_knd():
-    assert 12 == Yatzy.four_of_a_kind(3,3,3,3,5)
-    assert 20 == Yatzy.four_of_a_kind(5,5,5,4,5)
-    assert 12 == Yatzy.four_of_a_kind(3,3,3,3,3)
-    assert 0  == Yatzy.four_of_a_kind(3,3,3,2,1)
+def test_four_of_a_kind():
+    assert 17 == Yatzy.four_of_a_kind([3,3,3,3,5])
+    assert 24 == Yatzy.four_of_a_kind([5,5,5,4,5])
+    assert 15 == Yatzy.four_of_a_kind([3,3,3,3,3])
+    assert 0  == Yatzy.four_of_a_kind([3,3,3,2,1])
 
 #the name is not in snake case and should be.
 #small straight has a fixed number of points if your roll has like a "ladder" of numbers such (1,2,3,4) or (2,3,4,5) and such, but only four numbers, not the all five dies

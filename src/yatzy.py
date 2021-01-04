@@ -90,17 +90,20 @@ class Yatzy:
         return answer
     
     @staticmethod
-    def four_of_a_kind( _1,  _2,  d3,  d4,  d5):
-        tallies = [0]*6
-        tallies[_1-1] += 1
-        tallies[_2-1] += 1
-        tallies[d3-1] += 1
-        tallies[d4-1] += 1
-        tallies[d5-1] += 1
-        for i in range(6):
-            if (tallies[i] >= 4):
-                return (i+1) * 4
-        return 0
+    def four_of_a_kind(dice):
+        dict_dice = dict.fromkeys(dice,0)
+        for die in dice:
+            dict_dice[die] += 1
+        for die in dict_dice:
+            if dict_dice[die] >= 4:
+                sumator = 0
+                for i in dice:
+                    sumator += i
+                answer = sumator
+                break
+            else:
+                answer = 0
+        return answer
     
 
     
