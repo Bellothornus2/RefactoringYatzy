@@ -18,14 +18,14 @@ def test_yatzy():
         assert 0 == Yatzy.yatzy([6,6,6,6,3])
 
 
-def test_1s():
+def test_ones():
         assert Yatzy.ones(1,2,3,4,5) == 1
         assert 2 == Yatzy.ones(1,2,1,4,5)
         assert 0 == Yatzy.ones(6,2,2,4,5)
         assert 4 == Yatzy.ones(1,2,1,1,1)
 
 
-def test_2s():
+def test_twos():
         assert 4 == Yatzy.twos(1,2,3,2,6)
         assert 10 == Yatzy.twos(2,2,2,2,2)
 
@@ -35,7 +35,7 @@ def test_threes():
         assert 12 == Yatzy.threes(2,3,3,3,3)
 
 
-def test_fours_test():
+def test_fours():
         assert 12 == Yatzy(4,4,4,5,5).fours()
         assert 8 == Yatzy(4,4,5,5,5).fours()
         assert 4 == Yatzy(4,5,5,5,5).fours()
@@ -47,7 +47,7 @@ def test_fives():
         assert 20 == Yatzy(4,5,5,5,5).fives()
 
 
-def test_sixes_test():
+def test_sixes():
         assert 0 == Yatzy(4,4,4,5,5).sixes()
         assert 6 == Yatzy(4,4,6,5,5).sixes()
         assert 18 == Yatzy(6,5,6,6,5).sixes()
