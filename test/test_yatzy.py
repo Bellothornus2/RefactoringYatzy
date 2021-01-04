@@ -4,18 +4,14 @@ from src.yatzy import Yatzy
 # available from http://pytest.org/
 # we can remove these variables for redundant info and memory consuming usage, because this tests are static, not dynamic
 def test_chance():
-        expected = 15
-        actual = Yatzy.chance(2,3,4,5,1)
-        assert expected == actual
-        assert 16 == Yatzy.chance(3,3,4,5,1)
+    assert 15 == Yatzy.chance(2,3,4,5,1)
+    assert 16 == Yatzy.chance(3,3,4,5,1)
 
 # we can remove these variables for redundant info and memory consuming usage, because this tests are static, not dynamic
 def test_yatzy():
-        expected = 50
-        actual = Yatzy.yatzy([4,4,4,4,4])
-        assert expected == actual
-        assert 50 == Yatzy.yatzy([6,6,6,6,6])
-        assert 0 == Yatzy.yatzy([6,6,6,6,3])
+    assert 50 == Yatzy.yatzy([4,4,4,4,4])
+    assert 50 == Yatzy.yatzy([6,6,6,6,6])
+    assert 0 == Yatzy.yatzy([6,6,6,6,3])
 
 #the order of this assert is wrong, first is the epected, and second the actual statmeent
 def test_aces():
